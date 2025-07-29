@@ -3,4 +3,4 @@ numpy
 opencv-python-headless
 Pillow
 ultralytics
-tensorflow
+tensorflow==2.13.0
