@@ -1,7 +1,5 @@
 streamlit
-opencv-python
-tensorflow==2.12.0
 numpy
+opencv-python-headless
 Pillow
-matplotlib
-scikit-learn
+ultralytics
