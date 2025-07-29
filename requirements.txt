@@ -1,6 +1,6 @@
 streamlit
-numpy
-opencv-python-headless
-Pillow
-ultralytics
 tensorflow==2.13.0
+opencv-python-headless
+numpy
+Pillow
+matplotlib
