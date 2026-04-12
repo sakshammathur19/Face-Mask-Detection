@@ -12,6 +12,9 @@ face_cascade = cv2.CascadeClassifier(
 )
 
 def detect_mask(image):
+    if image is None:
+        return None
+
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -42,10 +45,10 @@ def detect_mask(image):
 
 interface = gr.Interface(
     fn=detect_mask,
-    inputs=gr.Image(sources=["upload", "webcam"], type="numpy"),
+    inputs=gr.Image(sources=["webcam"], type="numpy"),
     outputs=gr.Image(type="numpy"),
-    title="Face Mask Detection",
-    description="Upload image or use webcam to detect mask"
+    title="Face Mask Detection (Webcam)",
+    description="Use your webcam to detect mask"
 )
 
 interface.launch()
