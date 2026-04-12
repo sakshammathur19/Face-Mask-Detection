@@ -42,11 +42,10 @@ def detect_mask(image):
 
 interface = gr.Interface(
     fn=detect_mask,
-
-    inputs=gr.Image(source="webcam", type="numpy"),
+    inputs=gr.Image(sources=["upload", "webcam"], type="numpy"),
     outputs=gr.Image(type="numpy"),
     title="Face Mask Detection",
-    description="Upload an image to detect mask"
+    description="Upload image or use webcam to detect mask"
 )
 
 interface.launch()
