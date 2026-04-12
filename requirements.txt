@@ -1,5 +1,4 @@
-gradio
+streamlit
+opencv-python
 tensorflow
-opencv-python-headless
 numpy
-Pillow
